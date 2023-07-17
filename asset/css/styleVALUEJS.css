@@ -220,8 +220,11 @@ input {
 @media (max-width: 400px) {
     section#box-profile {
         width: 90%;
-        height: 630px;
-        margin: 30px auto;
+        min-height: 250px;
+        margin: 30px auto 0;
+        overflow: hidden;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 
     .menu-mobile {
@@ -261,14 +264,15 @@ input {
         margin: 10px;
     }
 
-    .img-profile .photo {
-        left: 35px;
-        position: relative;
+    .img-profile {
+        text-align: center;
+        margin: 25px 0;
     }
 
     .information {
-        top: 75px;
-        margin-left: 25px;
+        margin-left: 0;
         font-size: 14px;
+        text-align: center;
     }
 }
+
