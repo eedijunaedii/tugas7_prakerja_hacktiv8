@@ -55,7 +55,7 @@
     </section>
 
     <section id="input-form">
-        <form method="#" action="#">
+        <form>
             <div class="form">
                 <label>Nama</label>
                 <input id="inpName" type="text" name="nama" placeholder="masukkan nama anda">
@@ -85,7 +85,7 @@
                 <input id="inpEmail" type="email" name="email">
             </div>            
             <div class="form">
-                <input onclick="simpanForm()" type="submit" name="submit" value="SUBMIT" class="bg-green">
+                <input onclick="simpanForm()" type="button" name="submit" value="SUBMIT" class="bg-green">
             </div>
         </form>            
     </section>
@@ -95,7 +95,7 @@
         formMenu.style.display = "none";
 
         function editForm() {
-            if (formMenu.style.display === "none") {
+            if (formMenu.style.display !== "block") {
                 formMenu.style.display = "block";
             } else {
                 formMenu.style.display = "none";
@@ -142,12 +142,12 @@
             var menu = document.getElementById("menu");
             var box = document.getElementById("box-profile");
 
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-                box.style.paddingTop = "0px";
-            } else {
+            if (menu.style.display !== "block") {
                 menu.style.display = "block";
                 box.style.paddingTop = "125px";
+            } else {
+                menu.style.display = "none";
+                box.style.paddingTop = "0px";
             }
         }
     </script>
